@@ -4,6 +4,9 @@ const plus_Button = document.getElementById("plus");
 const user_Number = document.querySelector(".user-number");
 const add_Cart = document.querySelector(".btn-content");
 const currentProductStatus = document.getElementById("currentProductStatus")
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
+const modal_Mobile = document.querySelector(".menu-modal-mobile")
 
 var thumbnail_Img = "./assets/images/image-product-1-thumbnail.jpg"
 var closeButton = "./assets/images/icon-delete.svg"
@@ -14,6 +17,8 @@ let productCounterValue = 1;
 add_Cart.addEventListener("click", addProductIntoCart);
 minus_Button.addEventListener("click", decreaseProductAmount);
 plus_Button.addEventListener("click", increaseProductAmount);
+openBtn.addEventListener("click", openMenuMobile);
+closeBtn.addEventListener("click", closeMenuMobile);
 
 const Product = {
     total: function () {
@@ -75,6 +80,10 @@ function increaseProductAmount() {
     return Product.selected(1)
 }
 
-// function apagar() {
-//     currentProductStatus.innerHTML = "Your cart is empty."
-// }
+function openMenuMobile() {
+    modal_Mobile.style.display = "flex"
+}
+
+function closeMenuMobile() {
+    modal_Mobile.style.display = "none"
+}

@@ -38,8 +38,30 @@
         align-items: center;
         width: 175px;
     }
-    .list-content-mobile {
+    .menu-modal-mobile {
+        z-index: 2;
+        background-color: var(--color-black-op);
+        position: fixed;
         display: none;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .modal-content {
+        background-color: var(--color-white);
+        height: 100%;
+        width: 60%;
+        padding: 30px;
+    }
+    #closeBtn {
+        cursor: pointer;
+        margin-bottom: 40px;
+    }
+    .list-content-mobile li {
+        color: var(--color-dr-blue);
+        margin: 25px 0;
     }
     .logo-desktop {
         display: none;
